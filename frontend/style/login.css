@@ -10,16 +10,18 @@ body{
 .background{
     background: radial-gradient(ellipse at top,rgb(197, 239, 253),rgb(155, 225, 251));
     display: flex;
+    box-sizing: border-box;
+    padding: 50px;
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    gap: 20px;
+    gap: 10vw;
     height: 100vh;
     width: 100wh;
 }
 .background img{
-    height: 300px;
-    width: 225px;
+    height:80vh;
+    width:60vh;
     border-radius: 50px;
 }
 .container-login{
@@ -31,6 +33,9 @@ body{
     justify-content: flex-start;
     flex-direction: column;
     gap: 15px;
+}
+.container-login h2{
+    font-size: 50px;
 }
 .lable-typing{
     width: 100%;
@@ -49,37 +54,63 @@ body{
     gap: 10px;
 }
 .container-label label, .container-typing input {
-    height: 20px;
+    height: 30px;
     line-height: 20px;
     box-sizing: border-box;
 }
+.container-label label{
+    font-size: 30px;
+}
+.container-typing{
+    flex: 1;
+}
+.container-typing input{
+    font-size: 20px;
+    width: 100%;
+    border: 2px solid rgb( 35, 31, 32);
+    background-color:transparent;
+    border-radius: 15px;
+    padding: 5px;
+}
 .container-button{
-    display: flex;
-    justify-content: space-between;
+    position: relative;
+
 }
 .button{
     border: none;
-    width: 100%;
+    width: fit-content;
     height: fit-content;
     background-color: transparent;
     box-sizing: border-box;
     padding: 10px;
     font-weight: bold;
     position: relative;
-    z-index: 1;
 }
 .button::after{
     content: '';
     width: 0;
-    background-color: rgb(189, 32, 49);
-    border-radius: 50px;
-    transition: width 0.3s ease-in-out;
     height: 100%;
+    border-bottom: 2px solid rgb( 189, 32, 49);
     position: absolute;
-    left: 0;
     top: 0;
-    z-index: 0;
+    left: 0;
+    transition: width 0.3s ease-in-out;
 }
 .button:hover::after{
     width: 100%;
+}
+.sign-in{
+    position: absolute;
+    left: 0;
+    top:50%;
+}
+.login-user{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.forget-password{
+    position: absolute;
+    top: 50%;
+    right: 0;
 }
