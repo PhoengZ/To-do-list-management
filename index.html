@@ -8,16 +8,25 @@
     <title>To-do list management</title>
 </head>
 <body>
-    
-    <div class="background">
-        <div class="head-tab">
+    <div class="head-tab">
+        <a href="index.html">
             <img src="frontend/res/github.png" alt="">
-            <span class="material-symbols-outlined" onclick="">menu</span>
-        </div>
+        </a>
+        <div class="dropdown">
+            <span class="material-symbols-outlined" onclick="navbar_show()">menu</span>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+    </div>
+    <div class="background">
         <div class="main-text">
             <h1>To-do list <span> management</span></h1>
         </div>
         <button class="goto">Try it</button>
     </div>
+    <script src="frontend/script/main.js"></script>
 </body>
 </html>
