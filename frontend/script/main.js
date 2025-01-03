@@ -1,6 +1,5 @@
 let nav_bar = document.querySelector(".dropdown-content");
 let dropdown = document.querySelector(".dropdown");
-
 function navbar_show(){
     let check = window.getComputedStyle(nav_bar);
     let check_1 = window.getComputedStyle(dropdown);
