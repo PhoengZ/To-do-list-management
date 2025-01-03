@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+body{
+    font-family: "Oswald", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0px;
+}
+.background{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(35, 31, 32);
+}
+.main-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-text h1{
+    font-size: 100px;
+    margin: 0px;
+    color: rgb(155, 225, 251);
+    animation: typing 5s steps(22) infinite;
+    animation-delay: 2s;
+    overflow: hidden;
+    max-width: fit-content;
+    width: 0;
+    white-space: nowrap;
+}
+.main-text span{
+    font-size: 100px;
+    margin: 0px;
+    color: rgb(255, 255, 255);
+}
+@keyframes typing {
+    0%{
+        width: 0;
+    }
+    50%{
+        width: 100%;
+    }
+}
+.head-tab{
+    position: absolute;
+    top: 0;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: fit-content;
+    padding: 10px 30px 10px 30px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+.head-tab img{
+    height: 40px;
+    width: 40px;
+}
+.goto{
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    font-size: 30px;
+    font-family: "Oswald", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    bottom: 15%;
+    background-color: rgb( 255, 255, 255);
+    border-radius: 10px;
+    z-index: 0;
+    color: rgb(189, 32, 49);
+    cursor: pointer;
+}
+.goto::after{
+    content: '';
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right,rgb(197, 239, 253),rgb(0, 98, 149));
+    transition: width 0.3s ease-in-out;
+    z-index: -1;
+    border-radius: 10px;
+}
+.goto:hover::after{
+    width: 100%;
+}
+.goto:hover{
+    color: rgb(35, 31, 32);
+}
