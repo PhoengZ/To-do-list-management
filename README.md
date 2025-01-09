@@ -9,12 +9,12 @@ Manage activity such as delete activity, updatae activity, create activity
 1.Install library for backend  
 ```bash
 cd backend
-npm install express dotenv mongoose cors
+npm install
 ```
 2.Install library for frontend
 ```bash
 cd frontend
-npm install express
+npm install
 ```
 3.Run backend server
 ```bash
