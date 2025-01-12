@@ -2,7 +2,7 @@ import { Backend_URL } from "./config.js";
 export async function createUser(payload) {
     try{
         console.log(Backend_URL);
-        const response = await fetch(`${Backend_URL}/user`,{
+        const response = await fetch(`${Backend_URL}/user/register`,{
             method:"POST",
             headers:{
                 "Content-Type": "application/json",

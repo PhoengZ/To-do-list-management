@@ -1,5 +1,20 @@
 import mongoose, { Schema } from "mongoose";
 
+const taskSchema = new mongoose.Schema({
+    taskName:{
+        type:String,
+        required:true
+    },
+    describtion:{
+        type:String,
+        required:false
+    },
+    schedule:{
+        type:Date,
+        required:false
+    }
+});
+
 const userSchema = new mongoose.Schema({
     Username:{
         type:String,
@@ -10,7 +25,7 @@ const userSchema = new mongoose.Schema({
         required: true,
     },
     List:{
-        type:[String],
+        type:[taskSchema],
         required:true
     }
 });

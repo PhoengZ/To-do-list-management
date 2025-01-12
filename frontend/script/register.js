@@ -10,20 +10,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 async function submitRegister(){
-    let username = document.querySelector("#user-input").value;
+    let Username = document.querySelector("#user-input").value;
     let password = document.querySelector("#user-password").value;
-    if (username == "" || password == ""){
+    if (Username == "" || password == ""){
         document.querySelector("#user-input").value = "";
         document.querySelector("#user-password").value ="";
         return;
     }
     const payload ={
-        Username: username,
+        username: Username,
         password: password,
-        List: [""]
+        List: []
     };
     try{
         await createUser(payload);
+        console.log("registeration complete!");
+        
     }catch (eror){
         console.log("eror_regis");
     }
